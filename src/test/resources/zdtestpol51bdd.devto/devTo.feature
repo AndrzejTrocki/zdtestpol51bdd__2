@@ -8,3 +8,7 @@ Feature: devTo basic features
     When I go to podcast section
     When I click on first podcast on the list
     Then I should be redirected to podcast page
+  Scenario: Search the testing phrase
+    Given I go to devto main page
+    When I search for testing phrase
+    Then Top 3 blogs found should have testing in title
