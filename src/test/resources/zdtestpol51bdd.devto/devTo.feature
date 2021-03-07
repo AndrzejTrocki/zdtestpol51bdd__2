@@ -11,4 +11,10 @@ Feature: devTo basic features
   Scenario: Search the phrase
     Given I go to devto main page
     When I search for "java" phrase
-    Then Top 3 blogs found should have correct phrase in title
+    Then Top 3 blogs found should have correct phrase in title or snipped
+  Scenario: Open and play first seeig podcast
+    Given I go to devto main page
+    When I go to podcast section
+    When I click on first podcast on the list
+    And I play the podcast
+    Then Podcast Should be played
