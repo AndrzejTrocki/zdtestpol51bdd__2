@@ -10,5 +10,5 @@ Feature: devTo basic features
     Then I should be redirected to podcast page
   Scenario: Search the phrase
     Given I go to devto main page
-    When I search for "python" phrase
+    When I search for "java" phrase
     Then Top 3 blogs found should have correct phrase in title
