@@ -21,8 +21,9 @@ public class MainPage {
         this.driver.get(url);
         PageFactory.initElements(this.driver, this);
     }
-    public void selectFirstBlog() {
+    public SingleBlogPage selectFirstBlog(){
         firstBlog.click();
+        return new SingleBlogPage(this.driver);
     }
     public void podcastClick(){
         podcast.click();
