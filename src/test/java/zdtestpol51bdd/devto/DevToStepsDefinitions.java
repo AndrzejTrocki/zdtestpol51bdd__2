@@ -1,5 +1,6 @@
 package zdtestpol51bdd.devto;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -113,7 +114,10 @@ public class DevToStepsDefinitions {
         Assert.assertTrue(isPauseBtnVisible);
     }
 
-
+    @After
+    public void tearDown(){
+        driver.quit();
+    }
 
 
 //    String singlePostTitle;
