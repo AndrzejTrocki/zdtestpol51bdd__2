@@ -13,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import zdtestpol51.browserUtills.BaseDriver;
 import zdtestpol51bdd.devto.pages.MainPage;
 import zdtestpol51bdd.devto.pages.PodcastListPage;
 import zdtestpol51bdd.devto.pages.SingleBlogPage;
@@ -37,8 +38,7 @@ public class DevToStepsDefinitions {
 
     @Before
     public void setup(){
-        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
-        driver = new ChromeDriver();
+        driver = BaseDriver.setHeadlessDriver();
         wait = new WebDriverWait(driver,20);
     }
     @Given("I go to devto main page")
